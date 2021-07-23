@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/navigation"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/QRReadFragment">
+
+    <fragment
+        android:id="@+id/QRReadFragment"
+        android:name="com.mitsui.tkmid.machineinfoviewer.QRReadFragment"
+        android:label="QRReadFragment"
+        tools:layout="@layout/fragment_q_r_read">
+        <action
+            android:id="@+id/action_QRReadFragment_to_PDFViewFragment"
+            app:destination="@id/PDFViewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/PDFViewFragment"
+        android:name="com.mitsui.tkmid.machineinfoviewer.PDFViewFragment"
+        android:label="PDFViewFragment" >
+        <argument
+            android:name="QRReadValue"
+            app:argType="string" />
+    </fragment>
+</navigation>
